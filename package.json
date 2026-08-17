@@ -1,11 +1,8 @@
 {
   "name": "trainer-landing",
-  "type": "module",
   "version": "0.0.1",
   "private": true,
-  "engines": {
-    "node": ">=22.12.0"
-  },
+  "type": "module",
   "scripts": {
     "dev": "astro dev --port 3001",
     "build": "astro build",
@@ -18,9 +15,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,astro}\"",
     "typecheck": "astro check",
     "prepare": "husky"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,astro}": "npx oxlint"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",
@@ -57,5 +51,11 @@
     "prettier-plugin-tailwindcss": "^0.8.1",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.67.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,astro}": "npx oxlint"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

@@ -10,4 +10,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [react()],
+  site: "https://zaccal.github.io",
+  base: "/trainer-landing",
 })

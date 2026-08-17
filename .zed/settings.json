@@ -3,9 +3,9 @@
     "TSX": {
       "formatter": {
         "language_server": {
-          "name": "oxfmt",
-        },
-      },
-    },
-  },
+          "name": "oxfmt"
+        }
+      }
+    }
+  }
 }
