@@ -16,7 +16,8 @@
     "fmt": "npx oxfmt",
     "fmt:fix": "npx oxfmt --fix",
     "format": "prettier --write \"**/*.{ts,tsx,astro}\"",
-    "typecheck": "astro check"
+    "typecheck": "astro check",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,astro}": "npx oxlint"
