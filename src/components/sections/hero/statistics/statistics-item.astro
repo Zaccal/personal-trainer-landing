@@ -1,0 +1,29 @@
+---
+import { NumberTicker } from "@/components/ui/number-ticker"
+import type { User02Icon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+
+interface Props {
+  icon: typeof User02Icon
+  label: string
+  value: number
+}
+
+const { icon, label, value } = Astro.props
+---
+
+<div
+  class="col-span-1 flex items-center gap-2 border-l-muted-foreground text-xl font-bold md:border-l md:pl-4 940:text-3xl"
+>
+  <HugeiconsIcon
+    className="size-16 text-primary md:size-14 940:size-16"
+    icon={icon}
+  />
+  <div class="flex flex-col">
+    <span class="">
+      <NumberTicker client:load value={value} />
+      +
+    </span>
+    <span class="text-sm font-normal text-muted/70">{label}</span>
+  </div>
+</div>

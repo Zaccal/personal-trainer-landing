@@ -1,0 +1,18 @@
+---
+import {
+  AlarmClockIcon,
+  DocumentAttachmentIcon,
+  EquipmentGym03Icon,
+  User02Icon,
+} from "@hugeicons/core-free-icons"
+import StatisticsItem from "./statistics-item.astro"
+---
+
+<div
+  class="wrapper grid grid-cols-2 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-1 md:gap-4"
+>
+  <StatisticsItem icon={User02Icon} label="Кленты" value={100} />
+  <StatisticsItem icon={AlarmClockIcon} label="Лет опыта" value={8} />
+  <StatisticsItem icon={EquipmentGym03Icon} label="Тренировок" value={1500} />
+  <StatisticsItem icon={DocumentAttachmentIcon} label="Программ" value={40} />
+</div>

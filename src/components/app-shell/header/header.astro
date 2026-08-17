@@ -1,0 +1,31 @@
+---
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
+import Burger from "./burger"
+---
+
+<header class="w-full border-b border-muted-foreground">
+  <div class="wrapper flex items-center justify-between py-6">
+    <span class="text-lg font-bold uppercase sm:text-xl"
+      >Руслан<span class="text-primary">.</span></span
+    >
+    <nav class="hidden 1080:block">
+      <ul class="flex items-center gap-6 text-foreground/70 uppercase">
+        <li class="hover:text-foreground"><a href="#">ОБО МНЕ</a></li>
+        <li class="hover:text-foreground">
+          <a href="#">Программы тренировок</a>
+        </li>
+        <li class="hover:text-foreground"><a href="#">Цены</a></li>
+        <li class="hover:text-foreground"><a href="#">Отзывы клиентов</a></li>
+        <li class="hover:text-foreground"><a href="#">Галерея</a></li>
+        <li class="hover:text-foreground"><a href="#">Частые вопросы</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <InteractiveHoverButton size="responsive-md" className="uppercase"
+        >ЗАПИСАТЬСЯ</InteractiveHoverButton
+      >
+      <Burger client:load className="1080:hidden" />
+    </div>
+  </div>
+</header>
