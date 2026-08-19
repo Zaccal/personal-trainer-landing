@@ -10,37 +10,36 @@ import Statistics from "@/components/sections/hero/statistics/statistics.astro"
 <section class="h-min">
   <DashedGridLayout>
     <div class="wrapper flex flex-col items-center py-24 1080:flex-row">
-      <div class="max-w-prose">
-        <span
-          class="mb-4 text-xs font-semibold text-primary uppercase sm:text-sm"
-          >ПЕРСОНАЛЬНЫЙ ТРЕНИНГ • РЕАЛЬНЫЙ РЕЗУЛЬТАТ</span
-        >
-        <h1
-          class="text-2xl leading-9 font-black xs:text-3xl xs:leading-12 sm:text-4xl sm:leading-14 md:text-5xl md:leading-15 [&_span]:text-primary"
-        >
-          <span>ТРАНСФОРМИРУЙ</span> СВОЁ ТЕЛО. <span>РАСКРОЙ </span> СВОЙ <span
-            >ПОТЕНЦИАЛ</span
-          >.
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          ПЕРСОНАЛЬНЫЙ ТРЕНИНГ • РЕАЛЬНЫЙ РЕЗУЛЬТАТ
+        </span>
+
+        <h1 class="hero-title">
+          <span>ТРАНСФОРМИРУЙ</span> СВОЁ ТЕЛО.
+          <span>РАСКРОЙ</span> СВОЙ
+          <span>ПОТЕНЦИАЛ</span>.
         </h1>
-        <p
-          class="mt-4 text-sm text-muted xs:text-base xs:leading-7 sm:text-lg sm:leading-8 md:text-xl"
-        >
+
+        <p class="hero-description">
           Персональные тренировки и индивидуальный подход, которые помогут тебе
           стать сильнее, увереннее и достичь своих целей.
         </p>
-        <div class="mt-8 flex flex-col gap-4 md:flex-row md:items-center">
-          <RainbowButton size="responsive" className="font-bold"
-            >ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</RainbowButton
-          >
-          <Button variant="outline" className="font-bold" size="responsive"
-            >СМОТРЕТЬ ПРОГРАММЫ</Button
-          >
+
+        <div class="hero-actions">
+          <RainbowButton size="responsive" className="font-bold">
+            ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+          </RainbowButton>
+
+          <Button variant="outline" className="font-bold" size="responsive">
+            СМОТРЕТЬ ПРОГРАММЫ
+          </Button>
         </div>
       </div>
 
-      <div class="w-full sm:h-200">
+      <div class="hero-image">
         <Image
-          loading={"eager"}
+          loading="eager"
           src={heroMain}
           class="size-full object-contain"
           fetchpriority="high"

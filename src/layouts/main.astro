@@ -3,7 +3,7 @@ import "@/styles/global.css"
 import Root from "./root.astro"
 ---
 
-<html lang="ru">
+<html lang="ru" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -15,4 +15,19 @@ import Root from "./root.astro"
       <slot />
     </Root>
   </body>
+  <script>
+    import Lenis from "lenis"
+
+    const lenis = new Lenis({
+      lerp: 0.08,
+      smoothWheel: true,
+    })
+
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  </script>
 </html>
