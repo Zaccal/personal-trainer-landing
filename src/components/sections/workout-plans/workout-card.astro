@@ -1,0 +1,49 @@
+---
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Image } from "astro:assets"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { ArrowRight01Icon } from "@hugeicons/core-free-icons"
+
+interface Props {
+  title: string
+  description: string
+  image: ImageMetadata
+  idx: number
+}
+
+const { title, description, image, idx } = Astro.props
+const formattedIdx = idx.toString().padStart(2, "0")
+---
+
+<Card className="relative mx-auto w-full max-w-sm pt-0">
+  <span class="absolute top-4 left-4 z-40 text-lg font-semibold"
+    >{formattedIdx}</span
+  >
+  <div class="absolute inset-0 z-30 aspect-video"></div>
+  <Image
+    src={image}
+    alt="Event cover"
+    loading="lazy"
+    format="webp"
+    quality={80}
+    width={640}
+    height={426}
+    class="relative z-20 aspect-video w-full object-cover"
+  />
+  <CardHeader>
+    <CardTitle>{title}</CardTitle>
+    <CardDescription>
+      {description}
+    </CardDescription>
+  </CardHeader>
+  <CardFooter>
+    <Button className="w-full">Подробнее</Button>
+  </CardFooter>
+</Card>
