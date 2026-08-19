@@ -1,9 +1,4 @@
-import {
-  Atom02Icon,
-  Certificate01Icon,
-  HealtcareIcon,
-  ManIcon,
-} from "@hugeicons/core-free-icons"
+import { Atom02Icon, Certificate01Icon, HealtcareIcon, ManIcon } from "@hugeicons/core-free-icons";
 
 export const ADVANTAGES = [
   {
@@ -14,20 +9,17 @@ export const ADVANTAGES = [
   },
   {
     title: "Индивидуальный подход",
-    description:
-      "Персональная программа под ваши цели, график и уровень подготовки — без шаблонных схем.",
+    description: "Персональная программа под ваши цели, график и уровень подготовки — без шаблонных схем.",
     icon: ManIcon,
   },
   {
     title: "Наука и практика",
-    description:
-      "Эффективные методики на стыке науки и опыта. Максимальный результат без вреда для здоровья и суставов.",
+    description: "Эффективные методики на стыке науки и опыта. Максимальный результат без вреда для здоровья и суставов.",
     icon: Atom02Icon,
   },
   {
     title: "Поддержка и контроль прогресса",
-    description:
-      "Постоянная мотивация, регулярные замеры и своевременная корректировка нагрузки на каждом этапе.",
+    description: "Постоянная мотивация, регулярные замеры и своевременная корректировка нагрузки на каждом этапе.",
     icon: HealtcareIcon,
   },
-] as const
+] as const;
