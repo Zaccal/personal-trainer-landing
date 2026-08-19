@@ -77,8 +77,8 @@
   --primary-foreground: oklch(0.969 0.007 285);
   --secondary: oklch(0.575 0.205 28);
   --secondary-foreground: oklch(0.969 0.007 285);
-  --muted: oklch(0.27 0.02 285);
-  --muted-foreground: oklch(0.75 0 0);
+  --muted: oklch(0.94 0.008 285);
+  --muted-foreground: oklch(0.48 0.02 285);
   --accent: oklch(0.68 0.145 20);
   --accent-foreground: oklch(0.145 0 0);
   --destructive: oklch(0.67 0.21 25);
@@ -180,7 +180,7 @@
   }
 
   .hero-description {
-    @apply mt-4 text-sm text-muted xs:text-base xs:leading-7 sm:text-lg sm:leading-8 md:text-xl;
+    @apply mt-4 text-sm text-muted-foreground xs:text-base xs:leading-7 sm:text-lg sm:leading-8 md:text-xl;
   }
 
   .hero-actions {
@@ -191,14 +191,27 @@
     @apply w-full sm:h-200;
   }
 
-  .hero-statistics-container {
+  .statistics-container {
     @apply grid grid-cols-2 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-1 md:gap-4;
   }
 
-  .hero-statistics-item {
+  .statistics-item {
     @apply col-span-1 flex items-center gap-2 border-l-muted-foreground text-xl font-bold md:border-l md:pl-4 940:text-3xl;
   }
+
+  .eyebrow-section {
+    @apply relative pl-4 text-sm uppercase before:absolute before:top-1/2 before:left-0 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-full before:bg-primary md:text-base;
+  }
+
+  .section-title {
+    @apply py-4 text-2xl font-black md:text-3xl;
+  }
+
+  .section-description {
+    @apply text-sm text-muted-foreground md:text-base;
+  }
 }
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

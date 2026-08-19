@@ -1,0 +1,68 @@
+---
+import { HugeiconsIcon } from "@hugeicons/react"
+import { RainbowButton } from "../ui/rainbow-button"
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardTitle,
+  CardDescription,
+} from "../ui/card"
+import { ADVANTAGES } from "@/lib/constants"
+import { BlurFade } from "../ui/blur-fade"
+---
+
+<section class="py-24" id="about">
+  <div class="wrapper">
+    <div class="flex flex-col items-start gap-12 1080:flex-row">
+      <div class="mx-auto mb-12 max-w-md text-center 1080:m-0 1080:text-left">
+        <span class="eyebrow-section">ОБО МНЕ</span>
+        <h2 class="section-title">Я РУСЛАН, ВАШ ПЕРСОНАЛЬНЫЙ ТРЕНЕР.</h2>
+        <p class="section-description">
+          Моя цель - помочь вам раскрыть свой потенциал и построить сильное,
+          функциональное тело. Я не верю в универсальные программы: каждый
+          человек уникален, поэтому тренировки, питание и нагрузка подбираются
+          индивидуально.
+        </p>
+        <p class="section-description mt-4 mb-8">
+          Вместе мы создадим понятный план, который будет соответствовать вашим
+          целям, уровню подготовки и образу жизни.
+        </p>
+
+        <RainbowButton size="responsive" className="font-bold">
+          ПОДРОБНЕЕ ОБО МНЕ
+        </RainbowButton>
+      </div>
+      <div
+        class="mx-auto grid max-w-sm grid-cols-1 gap-4 md:mx-0 md:max-w-max md:grid-cols-2 md:grid-rows-2"
+      >
+        {
+          ADVANTAGES.map((advantage, idx) => (
+            <BlurFade
+              inView
+              delay={0.25 * idx * 0.5}
+              client:load
+              className="h-full"
+            >
+              <Card className="h-full">
+                <CardHeader>
+                  <div class="w-fit rounded-md border border-primary/50 bg-secondary/20 p-1.5 text-primary shadow-xs transition-colors">
+                    <HugeiconsIcon
+                      className="size-6"
+                      strokeWidth={2}
+                      icon={advantage.icon}
+                    />
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <CardTitle className="font-bold">{advantage.title}</CardTitle>
+                  <CardDescription>{advantage.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </BlurFade>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

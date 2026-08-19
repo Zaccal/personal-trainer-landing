@@ -11,5 +11,4 @@ export default defineConfig({
   },
   integrations: [react()],
   site: "https://zaccal.github.io",
-  base: "/trainer-landing",
 });
