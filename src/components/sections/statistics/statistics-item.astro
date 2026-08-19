@@ -12,9 +12,9 @@ interface Props {
 const { icon, label, value } = Astro.props
 ---
 
-<div class="hero-statistics-item">
+<div class="statistics-item">
   <HugeiconsIcon
-    className="size-16 text-primary md:size-14 940:size-16"
+    className="size-10 text-primary xs:size-14 sm:size-16 md:size-14 940:size-16"
     icon={icon}
   />
   <div class="flex flex-col">
@@ -22,6 +22,6 @@ const { icon, label, value } = Astro.props
       <NumberTicker client:load value={value} />
       +
     </span>
-    <span class="text-sm font-normal text-muted/70">{label}</span>
+    <span class="text-sm font-normal text-muted-foreground">{label}</span>
   </div>
 </div>

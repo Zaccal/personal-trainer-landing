@@ -4,21 +4,22 @@ import { RainbowButton } from "@/components/ui/rainbow-button"
 import { Image } from "astro:assets"
 import heroMain from "@/assets/hero-main.webp"
 import DashedGridLayout from "@/layouts/dashed-grid-layout.astro"
-import Statistics from "@/components/sections/hero/statistics/statistics.astro"
 ---
 
-<section class="h-min">
+<section>
   <DashedGridLayout>
-    <div class="wrapper flex flex-col items-center py-24 1080:flex-row">
+    <div
+      class="wrapper flex flex-col items-center pt-24 1080:flex-row 1080:items-center"
+    >
       <div class="hero-content">
         <span class="hero-eyebrow">
           ПЕРСОНАЛЬНЫЙ ТРЕНИНГ • РЕАЛЬНЫЙ РЕЗУЛЬТАТ
         </span>
 
         <h1 class="hero-title">
-          <span>ТРАНСФОРМИРУЙ</span> СВОЁ ТЕЛО.
-          <span>РАСКРОЙ</span> СВОЙ
-          <span>ПОТЕНЦИАЛ</span>.
+          <span>ТРАНСФОРМИРУЙ</span> СВОЁ ТЕЛО. <span>РАСКРОЙ</span> СВОЙ <span
+            >ПОТЕНЦИАЛ</span
+          >.
         </h1>
 
         <p class="hero-description">
@@ -47,7 +48,5 @@ import Statistics from "@/components/sections/hero/statistics/statistics.astro"
         />
       </div>
     </div>
-
-    <Statistics />
   </DashedGridLayout>
 </section>
