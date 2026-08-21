@@ -64,7 +64,19 @@
       background-position: 200%;
     }
   }
-}
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite
+;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);}
+  to {
+    transform: translateX(calc(-100% - var(--gap)));}}
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);}
+  to {
+    transform: translateY(calc(-100% - var(--gap)));}}}
 
 :root {
   --background: oklch(0.969 0.007 285);
@@ -149,6 +161,7 @@
   body {
     @apply bg-background text-foreground;
   }
+
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
@@ -161,6 +174,10 @@
 @layer components {
   .wrapper {
     @apply mx-auto max-w-7xl px-4;
+  }
+
+  .section-container {
+    @apply py-16 md:py-24;
   }
 
   .hero-content {
