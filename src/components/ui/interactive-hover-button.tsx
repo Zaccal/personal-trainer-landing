@@ -16,7 +16,7 @@ const sizeClasses: Record<InteractiveHoverButtonSize, string> = {
   md: "rounded-md px-6 py-2 text-sm [&_svg]:size-5",
   lg: "rounded-lg px-8 py-3 text-base [&_svg]:size-5",
   default: "rounded-md px-6 py-2 text-sm [&_svg]:size-4",
-  "responsive-md": "md:rounded-md md:px-6 md:py-2 md:text-sm md:[&_svg]:size-5 rounded-sm px-4 py-1.5 text-xs [&_svg]:size-3.5",
+  "responsive-md": "md:rounded-md md:px-6 md:text-sm md:[&_svg]:size-5 rounded-sm px-4 py-2 text-xs [&_svg]:size-3.5",
 };
 
 const dotSizeClasses: Record<InteractiveHoverButtonSize, string> = {
