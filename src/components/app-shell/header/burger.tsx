@@ -39,7 +39,7 @@ export default function Burger({ className }: BurgerProps) {
                 <a href="#prices">Цены</a>
               </li>
               <li onClick={() => setIsOpen(false)}>
-                <a href="#">Отзывы клиентов</a>
+                <a href="#reviews">Отзывы клиентов</a>
               </li>
               <li onClick={() => setIsOpen(false)}>
                 <a href="#">Галерея</a>
