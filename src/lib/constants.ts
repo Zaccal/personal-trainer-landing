@@ -59,3 +59,58 @@ export const WORKOUT_PLANS = [
     image: LaptopAsset,
   },
 ] as const
+
+export const PRICES = [
+  {
+    planName: "БАЗОВЫЙ",
+    description: "Для начала индивидуальных тренировок",
+    price: 89000,
+    billingCycle: "/ месяц",
+    variant: "default",
+    isCurrentPlan: false,
+    buttonText: "НАЧАТЬ",
+    href: "/start",
+    features: [
+      "4 тренировки в месяц",
+      "Индивидуальная программа",
+      "Базовые рекомендации по питанию",
+      "Поддержка в течение месяца",
+    ],
+  },
+  {
+    planName: "ПРОДВИНУТЫЙ",
+    description: "Больше тренировок и постоянная поддержка",
+    price: 149000,
+    billingCycle: "/ месяц",
+    variant: "popular",
+    isCurrentPlan: false,
+    buttonText: "НАЧАТЬ",
+    href: "/start",
+    features: [
+      "8 тренировок в месяц",
+      "Персональная программа тренировок",
+      "Рекомендации по питанию",
+      "Регулярная корректировка программы",
+      "Приоритетная поддержка",
+      "Отслеживание прогресса",
+    ],
+  },
+  {
+    planName: "ПРЕМИУМ",
+    description: "Максимально персональный подход",
+    price: 199000,
+    billingCycle: "/ месяц",
+    variant: "default",
+    isCurrentPlan: false,
+    buttonText: "НАЧАТЬ",
+    href: "/start",
+    features: [
+      "12 тренировок в месяц",
+      "Полностью индивидуальный подход",
+      "Персональный план питания",
+      "Приоритетная поддержка",
+      "Постоянный контроль прогресса",
+      "Регулярные консультации",
+    ],
+  },
+] as const

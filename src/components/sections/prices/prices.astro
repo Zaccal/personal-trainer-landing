@@ -1,0 +1,29 @@
+---
+import PriceCard from "./price-card.astro"
+import { PRICES } from "@/lib/constants"
+import { BlurFade } from "@/components/ui/blur-fade"
+---
+
+<section class="py-24" id="prices">
+  <div class="wrapper">
+    <div class="mx-auto max-w-prose text-center">
+      <span class="section-eyebrow">ЦЕНЫ</span>
+      <h2 class="section-title">Инвестируй в себя.</h2>
+      <p class="section-description">
+        Выберите формат тренировок, который подходит именно вам.
+      </p>
+    </div>
+
+    <BlurFade inView client:load>
+      <ul class="mt-10 grid grid-cols-1 gap-6 sm:mt-12 lg:mt-14 lg:grid-cols-3">
+        {
+          PRICES.map((price) => (
+            <li>
+              <PriceCard {...price} />
+            </li>
+          ))
+        }
+      </ul>
+    </BlurFade>
+  </div>
+</section>

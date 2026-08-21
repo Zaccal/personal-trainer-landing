@@ -199,12 +199,12 @@
     @apply col-span-1 flex items-center gap-2 border-l-muted-foreground text-xl font-bold md:border-l md:pl-4 940:text-3xl;
   }
 
-  .eyebrow-section {
+  .section-eyebrow {
     @apply relative pl-4 text-sm uppercase before:absolute before:top-1/2 before:left-0 before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-full before:bg-primary md:text-base;
   }
 
   .section-title {
-    @apply py-4 text-2xl font-black md:text-3xl;
+    @apply py-4 text-2xl font-black uppercase md:text-3xl;
   }
 
   .section-description {
